@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="wrapper">
+        <div class="columnLeft">
+            
+            <form action="">
+                <div class="formFlexContainer">
+                    <label for="keyword">Select a Colour</label>
+                    <div class="colorSelector">
+                        <input type="color" id="colorInputColor" value="#FFFFFF">
+                        <input type="text" id="colorInputText" placeholder="#FFFFFF">
+                    </div>
+                </div>
+            
+                <div class="schemeSelector">
+                    <label for="schemes">Select a Colour Scheme</label>
+                    <select name="schemes" id="schemes">
+                        <option value="analogic">Analogic</option>
+                        <option value="analogic-complement">Analogic-Complement</option>
+                        <option value="monochrome-dark">Monochrome-Dark</option>
+                        <option value="monochrome">Monochrome</option>
+                        <option value="triad">Triad</option>
+                        <option value="quad">Quad</option>
+                    </select>
+                </div>
+                
+                <input class="submit" type="submit" value="find colors to match">
+
+            </form>
+
+            <div class="results">
+                <div class="answer1"></div>
+                <div class="answer2"></div>
+                <div class="answer3"></div>
+                <div class="answer4 hideAnswer"></div>
+            </div>
+            
+        </div>
+    
+        <div class="columnRight">
+            <h1>Colour Your World</h1>
+            <div class="livingRoom wrapper">
+                <div class=colorResults>
+                    <div class="colorResult1"></div>
+                    <div class="colorResult2"></div>
+                    <div class="colorResult3"></div>
+                </div>
+
+                <img src="./assets/room.png" alt="white living room">
+            </div>
+        </div>
+    </main>
+    
+<footer >
+    <div class="wrapper">
+        <p>Created at <a href="https://junocollege.com/">Juno College</a></p>
+    </div>
+</footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+    
+</body>
+</html>

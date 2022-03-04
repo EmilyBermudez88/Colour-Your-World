@@ -1,0 +1,352 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* BASIC LAYOUT OF STYLING */
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'poiret one','arial','sans serif'
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.columnRight {
+    width: 73%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.columnLeft {
+    margin-top:5vh;
+    min-height: 90vh;
+    width: 27%;
+    border-right: 3px solid grey;
+}
+
+/* *******STYLING FOR RIGHT COLUMN******** */
+
+.livingRoom{
+    position:relative;
+    aspect-ratio: 8 / 5;
+    border: 3px solid rgb(171, 171, 171);
+}
+
+.livingRoom img {
+    position: absolute;
+    object-fit: contain;
+    max-width: 100%;
+    z-index:40;
+}
+
+.colorResults div {
+    position: absolute;
+}
+
+.colorResult1 {
+    width: 88%;
+    height: 83%;
+    z-index: 10;
+}
+
+.colorResult2{
+    right: 0;
+    height: 90%;
+    width: 12%;
+    z-index:20;
+}
+
+.colorResult3{
+    bottom: 0;
+    left: 26%;
+    width: 40%;
+    height: 38%;
+    z-index:30;
+}
+
+h1 {
+    margin-top: 50px;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    font-size: 3.2rem;
+    font-family: 'fredericka the great', 'arial','sans serif';
+    background: linear-gradient(to right, #f9a825, #ff5722,#ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047,#eeff41);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/********* STYLING FOR LEFT COLUMN ***********/
+
+form {
+    margin-top: 30px;
+    min-height: 35vh;
+    position: relative;
+}
+
+select,
+input[type=submit] {
+    font-family:'poiret one', 'arial';
+}
+
+input[type=color],
+select,
+.submit {
+    border:none;
+    cursor: pointer;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+input[type=color] {
+    width: 130px;
+    height: 35px;
+    padding:0;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+input[type=text] {
+    width: 90px;
+    color: rgb(149, 149, 149);
+    border: none;
+    font-family: 'poiret one','arial', 'sans serif';
+    text-transform: uppercase;
+}
+
+select {
+    margin: 10px 0;
+    width: 210px;
+    height: 35px;
+}
+
+.submit {
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border:1px solid black;
+    background-color: transparent;
+    position: absolute;
+    bottom: 20px;
+}
+
+.submit:hover,
+.submit:active {
+    background: linear-gradient(to right, #f9a825, #ff5722,#ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047,#eeff41);
+    color: white;
+    opacity: 0.7;
+}
+
+/************ RESULTS SECTIONS ***********/
+
+.results {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.results div {
+    display:flex;
+    padding-right:10px;
+}
+
+.results .hideAnswer{
+    display:none;
+}
+
+.paletteInfo1,
+.paletteInfo2,
+.paletteInfo3,
+.paletteInfo4 {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.paletteInfo4 p {
+    text-transform: uppercase;
+}
+
+.palette1,
+.palette2,
+.palette3,
+.palette4 {
+    height: 80px;
+    width: 80px;
+    margin: 10px 15px 10px 0;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+h3,
+p {
+    margin: 0;
+    padding-bottom:3px;
+    font-size: 1rem;
+    color: grey;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+/********** FOOTER ************/
+
+footer a {
+    text-decoration: none;
+    color: grey;
+}
+
+footer p {
+    padding: 20px 0 10px 0;
+}
+
+
+/* ******* MEDIA QUERIES ********* */
+
+@media (max-width:940px) {
+    main {
+        flex-direction: column-reverse;
+    }
+
+    .columnRight {
+        min-height: 40vh;
+        width: 100%;
+    }
+
+    .columnLeft {
+        width: 90%;
+        margin: 30px auto 0 auto;
+        border-right:none;
+    }
+
+    form{
+        display: flex;
+        justify-content: space-around;
+        min-height: 15vh;
+        position: relative;
+    }
+
+    .schemeSelector{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .formFlexContainer {
+        margin-bottom: 30px;
+    }
+
+    .submit {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .results {
+        margin-top: 50px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .results div {
+        flex-direction: column;
+        position: relative;
+        text-align: center;
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    .palette1,
+    .palette2,
+    .palette3,
+    .palette4 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+
+    footer {
+    background: rgb(181, 181, 181);
+}
+    footer p,
+    footer a {
+        text-align:center;
+        color: white;
+    }
+}
+
+@media (max-width:700px) {
+    .results {
+        flex-wrap: wrap;
+    }
+
+    h1 {
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width:580px) {
+    .wrapper {
+        width: 95%;
+    }
+
+    select {
+        width: 190px;
+    }
+
+    input[type=color]{
+        width: 110px;
+    }
+}
+
+@media(max-width:480px) {
+    .columnLeft {
+        margin-top: 10px;
+    }
+    form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formFlexContainer,
+    label{
+        text-align: center;
+    }
+
+    input[type=color]{
+        width: 150px;
+        margin: 10px 5px 0 0;
+    }
+
+    input[type=text]{
+        width: 55px;
+    }
+
+    select {
+        width: 220px;
+        margin-bottom: 35px;
+    }
+
+    .submit {
+        width: 220px;
+    }
+}
